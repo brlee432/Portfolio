@@ -20,5 +20,9 @@ module.exports = {
 				exclude: /node_modules/
 			}
 		]
+	},
+	devServer: {
+		historyApiFallback: true,
+		contentBase: './'
 	}
 }

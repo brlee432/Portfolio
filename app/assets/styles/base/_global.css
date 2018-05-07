@@ -1,0 +1,18 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	color: $secondaryColor;
+	background-color:gray;
+}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+* {
+	box-sizing:border-box;
+}
+
+a {
+	 color:$linkColor; 
+}
