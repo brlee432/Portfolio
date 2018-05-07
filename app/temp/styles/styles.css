@@ -12,7 +12,7 @@ img {
 	        box-sizing:border-box;
 }
 a {
-	 color:#50ff33; 
+	 color:aquamarine; 
 }
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -373,7 +373,7 @@ template {
   display: none;
 }
 .site-header {
-	 padding:10px;
+	 padding:10px 10px -10px 10px;
 	 position:absolute;
 	 z-index: 2;
 	 width:100%;
@@ -390,13 +390,14 @@ template {
 @media (min-width:800px) {
 .site-header {
 	 	position:fixed;
+	 	padding: 10px;
 	 	background-color: rgba(0,0,0, 1)
 
 
 }
 
 	 	.site-header--dark {
-	 		background-color:#000000, .85);
+	 		background-color:#000000, .80);
 	 	}
 	}
 .site-header__main-title {
@@ -430,7 +431,7 @@ template {
 	 	height:75px;
 	 	position:absolute;
 	 	top:50px;
-	 	left: 30px;
+	 	left: 35px;
 	 }
 @media (min-width:800px) {
 .site-header__logo {
@@ -444,8 +445,13 @@ template {
 	}
 .site-header__logo-title {
 	 	float:left;
-	 	margin-left:10px;
+	 	margin-top: 15px;
 	 }
+@media (min-width:800px) {
+.site-header__logo-title {
+	 		margin-left:10px
+	 }
+	}
 .site-header__menu-icon {
 	 	width:20px;
 	 	height:19px;
@@ -646,6 +652,68 @@ template {
 	}
 
 			.nav-menu a.is-current-link {
-				color:#50ff33;
+				color:aquamarine;
 			}
+	}
+.hero {
+	position:relative;
+	padding-top:125px;
+}
+@media (min-width:800px) {
+.hero__nav-plate {
+			padding-top:60px;
+			width:100%
+	}
+	}
+.hero__text-container {
+		position:absolute;
+		margin-top:250px;
+		top:50%;
+		-webkit-transform:translateY(-50%);
+		        transform:translateY(-50%);
+		left: 0;
+		width:100%;
+		text-align:center;
+		padding-top:88px;
+	}
+@media (min-width:800px) {
+.hero__text-container {
+			padding:60px
+	}
+	}
+.hero__title {
+		font-weight:300;
+		color: white;
+		margin:0;
+		font-size:2.4rem;
+	}
+@media (min-width:530px) {
+.hero__title {
+			font-size:4.8rem
+	}
+	}
+.hero__subtitle {
+		font-weight:300;
+		color: white;
+		font-size:1.5rem;
+		margin:0;
+	}
+@media (min-width:530px) {
+.hero__subtitle {
+			font-size:2.9rem
+	}
+	}
+.hero__description {
+		color:white;
+		font-size:1.1rem;
+		font-weight:100;
+		max-width:30rem;
+		margin-left:auto;
+		margin-right:auto;
+		text-shadow:2px 2px 0 rgb(0,0,0, .1);
+	}
+@media (min-width:530px) {
+.hero__description {
+			font-size:1.875rem
+	}
 	}
