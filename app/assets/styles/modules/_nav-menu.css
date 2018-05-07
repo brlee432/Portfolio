@@ -1,0 +1,37 @@
+.nav-menu {
+	padding-top: 10px;
+
+	&--pull-right {
+		float:right;
+	}
+
+	ul {
+		margin:0;
+		padding:0;
+		@mixin clearfix;
+	}
+
+	li {
+		list-style: none;
+		display:inline-block;
+		padding-right:7px;
+	}
+
+	li:last-child {
+		padding-right: 0;
+	}
+
+	a {
+		padding: 5px 8px;
+		display:block;
+		color:$secondaryColor;
+		text-decoration: none;
+		font-size: .8rem;
+		background-color: rgba($mainColor, .5);
+
+
+		&.is-current-link {
+			color:$linkColor;
+		}
+	}
+}
