@@ -46,7 +46,7 @@
 	 	position:absolute;
 	 	top:50px;
 	 	left: 35px;
-	 	
+
 	 	@mixin atMedium {
 	 		float:left;
 	 		position:relative;
@@ -153,6 +153,4 @@
 	 		transform: scale(1);
 	 	}
 	 }
-
-
 }

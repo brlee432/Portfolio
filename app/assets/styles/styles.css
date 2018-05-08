@@ -6,4 +6,5 @@
 @import "modules/_wrapper";
 @import "modules/_nav-menu";
 @import "modules/_hero";
-@import "modules/about-section";
+@import "modules/_about-section";
+@import "modules/_headline";
