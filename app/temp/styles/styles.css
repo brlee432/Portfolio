@@ -441,6 +441,7 @@ template {
 	}
 .site-header__logo-title {
 	 	float:left;
+	 	margin-left:-5px;
 	 	margin-top: 15px;
 	 }
 @media (min-width:800px) {
@@ -663,8 +664,7 @@ template {
 	}
 .hero__text-container {
 		position:absolute;
-		margin-top:250px;
-		top:50%;
+		top:40%;
 		-webkit-transform:translateY(-50%);
 		        transform:translateY(-50%);
 		left: 0;
@@ -672,9 +672,15 @@ template {
 		text-align:center;
 		padding-top:88px;
 	}
+@media (min-width:530px) {
+.hero__text-container {
+			top:50%
+	}
+	}
 @media (min-width:800px) {
 .hero__text-container {
-			padding:60px
+			padding:60px;
+			top:55%
 	}
 	}
 .hero__title {
@@ -684,6 +690,11 @@ template {
 		font-size:2.4rem;
 	}
 @media (min-width:530px) {
+.hero__title {
+			font-size:2.7rem
+	}
+	}
+@media (min-width:800px) {
 .hero__title {
 			font-size:4.8rem
 	}
@@ -696,6 +707,11 @@ template {
 	}
 @media (min-width:530px) {
 .hero__subtitle {
+			font-size:1.7rem
+	}
+	}
+@media (min-width:800px) {
+.hero__subtitle {
 			font-size:2.9rem
 	}
 	}
@@ -703,13 +719,83 @@ template {
 		color:white;
 		font-size:1.1rem;
 		font-weight:100;
-		max-width:30rem;
+		max-width:20rem;
 		margin-left:auto;
 		margin-right:auto;
 		text-shadow:2px 2px 0 rgb(0,0,0, .1);
 	}
 @media (min-width:530px) {
 .hero__description {
+			font-size:1.3rem
+	}
+	}
+@media (min-width:800px) {
+.hero__description {
+			font-size:1.875rem;
+			max-width:30rem
+	}
+	}
+.about-section {
+	margin-top: 770px;
+
+}
+.headline {
+	font-weight: 300;
+	font-size:1.9rem;
+	color:white;
+}
+@media (min-width:530px) {
+.headline {
+		font-size:2.875rem
+}
+	}
+.headline--centered{
+		text-align:center;
+	}
+.headline--secondary {
+		color:#50ff33;
+	}
+.headline--small {
+		font-size:1.2rem;
+
+	}
+@media (min-width:530px) {
+.headline--small {
 			font-size:1.875rem
+
 	}
 	}
+.headline--narrow {
+		max-width: 500px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+.headline--light {
+		font-weight:100;
+	}
+.headline--b-margin-small {
+		margin-bottom:.5em;
+	}
+.headline--b-margin-large {
+		margin-bottom:1.6em;
+	}
+.headline--no-t-margin {
+		margin-top:0;
+	}
+.canvas {
+	margin: 0px;
+	position:relative;
+	background-color:#50ff33;
+	height:100%;
+	width:100%;
+}
+canvas {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -17px;
+	z-index: 1;
+}
+#canvasImg {
+	display:none;
+}

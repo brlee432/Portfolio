@@ -1,0 +1,19 @@
+.canvas {
+	margin: 0px;
+	position:relative;
+	background-color:$secondaryColor;
+	height:100%;
+	width:100%;
+}
+
+canvas {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -17px;
+	z-index: 1;
+}
+
+#canvasImg {
+	display:none;
+}

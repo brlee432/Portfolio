@@ -11,16 +11,20 @@
 
 	&__text-container {
 		position:absolute;
-		margin-top:250px;
-		top:50%;
+		top:40%;
 		transform:translateY(-50%);
 		left: 0;
 		width:100%;
 		text-align:center;
 		padding-top:88px;
 
+		@mixin atSmall {
+			top:50%;
+		}
+
 		@mixin atMedium {
 			padding:60px;
+			top:55%;
 		}
 	}
 
@@ -31,6 +35,10 @@
 		font-size:2.4rem;
 
 		@mixin atSmall {
+			font-size:2.7rem;
+		}
+
+		@mixin atMedium {
 			font-size:4.8rem;
 		}
 	}
@@ -42,6 +50,10 @@
 		margin:0;
 
 		@mixin atSmall {
+			font-size:1.7rem;
+		}
+
+		@mixin atMedium {
 			font-size:2.9rem;
 		}
 	}
@@ -50,13 +62,19 @@
 		color:white;
 		font-size:1.1rem;
 		font-weight:100;
-		max-width:30rem;
+		max-width:20rem;
 		margin-left:auto;
 		margin-right:auto;
 		text-shadow:2px 2px 0 rgb(0,0,0, .1);
 
 		@mixin atSmall {
+			font-size:1.3rem;
+			
+		}
+
+		@mixin atMedium {
 			font-size:1.875rem;
+			max-width:30rem;
 		}
 	}
 }

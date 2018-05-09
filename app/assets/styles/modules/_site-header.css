@@ -59,6 +59,7 @@
 
 	 &__logo-title {
 	 	float:left;
+	 	margin-left:-5px;
 	 	margin-top: 15px;
 
 	 	@mixin atMedium {
