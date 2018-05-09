@@ -1,12 +1,11 @@
-function zenCanvas() {
-	
-	var canvasInteractive = document.getElementById('canvas-interactive');
-	var canvasReference = document.getElementById('canvas-reference');
+var canvasInteractive = document.getElementById('canvas-interactive');
+var canvasReference = document.getElementById('canvas-reference');
 	 
-	var contextInteractive = canvasInteractive.getContext('2d');
-	var contextReference = canvasReference.getContext('2d');
+var contextInteractive = canvasInteractive.getContext('2d');
+var contextReference = canvasReference.getContext('2d');
+var image = document.getElementById('canvasImg');
 
-	var image = document.getElementById('canvasImg');
+function zenCanvas() {
 
 	var width = canvasInteractive.width = canvasReference.width = window.innerWidth;
 	var height = canvasInteractive.height = canvasReference.height = window.innerHeight;
@@ -14,20 +13,22 @@ function zenCanvas() {
 	if (width >= 800) {
 		image.src = 'assets/images/logo--particles-large.png';
 		var logoDimensions = { x: 865, y: 920 };
-	} else if (width >= 530 && width <= 800) {
+	} else if (width >= 600 && width < 800) {
 		image.src = 'assets/images/logo--particles-medium.png';
-		var logoDimensions = { x: 585, y: 700};
-	} else if (width >= 530 && width <= 700) {
-		image.src = 'assets/images/logo--particles-medium.png';
-		var logoDimensions = { x: 500, y: 1000};
-	} else if (width >= 450 && width <= 530) {
+		var logoDimensions = { x: 585, y: 815};
+	} else if (width >= 530 && width < 600) {
+		image.src = 'assets/images/logo--particles-med-small.png';
+		var logoDimensions = { x: 540, y: 740};
+	} else if (width >= 450 && width < 530) {
 		image.src = 'assets/images/logo--particles-small.png';
-		var logoDimensions = { x: 450, y: 850};
-	} else if (width < 450) {
+		var logoDimensions = { x: 450, y: 700};
+	} else if (width >=350 && width < 450) {
 		image.src = 'assets/images/logo--particles-smaller.png';
-		var logoDimensions = { x: 290, y: 850};
+		var logoDimensions = { x: 290, y: 600};
+	} else if (width < 350) {
+		image.src = 'assets/images/logo--particles-smaller.png';
+		var logoDimensions = { x: 290, y: 560};
 	}
-
 
 	var center = {
 		x: width/2,
@@ -90,9 +91,16 @@ function zenCanvas() {
 	            if(pixels[++index] > 0) {
 	                particleArr.push(new Particle(x, y));
 	            }
+	            window.onresize = function(event) { //very important for facilitating responsive particle scaling
+	            	particleArr = [];
+	            	if(pixels[++index] > 0) {
+		                particleArr.push(new Particle(x, y));
+		            }
+	            }   
 	        }
 	    }
 	};
+	window.onload = function (event) { init(); };
 	init();
 
 	function update() {
@@ -144,5 +152,6 @@ function zenCanvas() {
 }
 zenCanvas();
 
-
-//window.addEventListener("resize", function(event) { zenCanvas.Particle(); });
+window.addEventListener("resize", function(event) { 
+	zenCanvas(); 
+});

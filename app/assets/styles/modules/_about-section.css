@@ -1,4 +1,19 @@
 .about-section {
-	margin-top: 770px;
+	margin-top: 300px;
 
+	@mixin atMicro {
+		margin-top:370px;
+	}
+
+	@mixin atVerySmall {
+		margin-top:600px;
+	}
+
+	@mixin atSmall {
+		margin-top:730px;
+	}
+
+	@mixin atMedium {
+		margin-top:770px;
+	}
 }
