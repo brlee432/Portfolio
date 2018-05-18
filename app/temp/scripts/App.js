@@ -10441,17 +10441,22 @@ return jQuery;
 "use strict";
 
 
-var _MobileMenu = __webpack_require__(2);
-
-var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
-
 var _jquery = __webpack_require__(0);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _MobileMenu = __webpack_require__(2);
+
+var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
+
+var _TimeSince = __webpack_require__(3);
+
+var _TimeSince2 = _interopRequireDefault(_TimeSince);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
+var timeSince = new _TimeSince2.default();
 
 /***/ }),
 /* 2 */
@@ -10502,6 +10507,93 @@ var MobileMenu = function () {
 }();
 
 exports.default = MobileMenu;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TimeSince = function () {
+	function TimeSince() {
+		_classCallCheck(this, TimeSince);
+
+		this.birthElement = (0, _jquery2.default)(".birthElement");
+		this.devElement = (0, _jquery2.default)(".devElement");
+		var bD = new Date('1995-05-13T20:26:42');
+		var dD = new Date('2017-04-13T08:30:46');
+		this.updateClock(bD, this.birthElement);
+		this.updateClock(dD, this.devElement);
+	}
+
+	_createClass(TimeSince, [{
+		key: "updateClock",
+		value: function updateClock(date, em) {
+			var _this = this;
+			setInterval(function () {
+				return _this.timeCalc(date, em);
+			}, 1000);
+		}
+	}, {
+		key: "timeCalc",
+		value: function timeCalc(dateString, element) {
+			var seconds = 1000;
+			var minutes = seconds * 60;
+			var hours = minutes * 60;
+			var days = hours * 24;
+			var years = days * 365.24;
+			var now = Date.now();
+			var base = dateString.getTime();
+			var s = Math.round((now - base) / seconds % 60);
+			var m = Math.round((now - base) / minutes % 60);
+			var h = Math.round((now - base) / hours % 24);
+			var d = Math.round((now - base) / days % 365.24);
+			var y = Math.round((now - base) / years);
+			var yString = y + " years, ";
+			var dString = d + " days, ";
+			var hString = h + " hours, ";
+			var mString = m + " minutes, and ";
+			var sString = s + " seconds";
+
+			if (y == 1) {
+				yString = y + " year, ";
+			}
+			if (d == 1) {
+				dString = d + " day, ";
+			}
+			if (h == 1) {
+				hString = h + " hour, ";
+			}
+			if (m == 1) {
+				mString = m + " minute, and ";
+			}
+			if (s == 1) {
+				sString = s + " second";
+			}
+
+			element.empty().append(yString + dString + hString + mString + sString);
+		}
+	}]);
+
+	return TimeSince;
+}();
+
+exports.default = TimeSince;
 
 /***/ })
 /******/ ]);

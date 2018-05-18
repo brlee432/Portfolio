@@ -148,7 +148,6 @@ function zenCanvas() {
 	    mouse.x = 0;
 	    mouse.y = 0;
 	}, false);
-	console.log(width);
 }
 zenCanvas();
 

@@ -4,8 +4,11 @@
 @import "normalize.css";
 @import "modules/_site-header";
 @import "modules/_wrapper";
+@import "modules/_row.css";
 @import "modules/_nav-menu";
 @import "modules/_hero";
-@import "modules/_about-section";
+@import "modules/_headline-section";
 @import "modules/_headline";
 @import "modules/_canvas";
+@import "modules/_picture-text-section";
+@import "modules/_base-text-container";

@@ -2,8 +2,6 @@
 	margin: 0px;
 	position:relative;
 	background-color:$secondaryColor;
-	height: 100%;
-	width:100%;
 }
 
 canvas {

@@ -1,0 +1,29 @@
+.picture-text-section {
+	padding:1.2rem 0;
+
+	@mixin atLarge {
+		padding:4.5rem 0;
+	}
+
+	&--no-b-padding-until-medium {
+		padding-bottom:0;
+
+		@mixin atMedium {
+			padding-bottom:4.5rem;
+		}
+	}
+
+	&--no-b-padding-until-large {
+		padding-bottom:0;
+
+		@mixin atLarge {
+			padding-bottom:4.5rem;
+		}
+
+	}
+
+	&--black {
+		background-color:$mainColor;
+		color:white;
+	}
+}
