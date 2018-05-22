@@ -12,3 +12,5 @@
 @import "modules/_canvas";
 @import "modules/_picture-text-section";
 @import "modules/_base-text-container";
+@import "modules/_section-title";
+@import "modules/_flex";

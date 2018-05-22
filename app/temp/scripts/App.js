@@ -10453,10 +10453,15 @@ var _TimeSince = __webpack_require__(3);
 
 var _TimeSince2 = _interopRequireDefault(_TimeSince);
 
+var _FlexInfo = __webpack_require__(4);
+
+var _FlexInfo2 = _interopRequireDefault(_FlexInfo);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
 var timeSince = new _TimeSince2.default();
+var flexInfo = new _FlexInfo2.default();
 
 /***/ }),
 /* 2 */
@@ -10594,6 +10599,56 @@ var TimeSince = function () {
 }();
 
 exports.default = TimeSince;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _jquery = __webpack_require__(0);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var FlexInfo = function () {
+	function FlexInfo() {
+		_classCallCheck(this, FlexInfo);
+
+		this.flexItem = (0, _jquery2.default)(".flex__item");
+		this.flexTitle = (0, _jquery2.default)(".flex__item--title");
+		this.flexContent = (0, _jquery2.default)(".flex__item-content");
+		this.events();
+	}
+
+	_createClass(FlexInfo, [{
+		key: "events",
+		value: function events() {
+			this.flexItem.hover(this.showInfo.bind(this));
+			this.flexItem.click(this.showInfo.bind(this));
+		}
+	}, {
+		key: "showInfo",
+		value: function showInfo() {
+			this.flexContent.toggleClass("flex__item-content--is-visible");
+			this.flexTitle.toggleClass("flex__item--title-with-content");
+		}
+	}]);
+
+	return FlexInfo;
+}();
+
+exports.default = FlexInfo;
 
 /***/ })
 /******/ ]);
