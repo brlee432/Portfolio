@@ -8,6 +8,10 @@
 	 	list-style: none;
 	 	justify-content: space-around;
  	}
+
+ 	&__container a {
+ 		text-decoration: none;
+ 	}
  	
  	&__item {
  		padding:5px;
@@ -15,7 +19,7 @@
  		height:200px;
  		width:275px;
  		background-color:$mainColor;
- 		box-shadow: 0px 0px 15px $secondaryColor;
+ 		box-shadow: 0px 0px 14px $secondaryColor;
  		
  		text-align:center;
  		color:white;
@@ -23,7 +27,8 @@
  		&--title {
  			line-height:9rem;
  			transform: scale(1);
- 			transition: all .3s ease-out;	
+ 			color:$secondaryColor;
+ 			transition: all .5s ease-out;	
  		}
 
  		&--title-with-content {
@@ -37,7 +42,7 @@
 	 	z-index: -10;
 	 	transform:scale(.3);
 	 	position: relative;
-	 	transition: all .3s ease-out;
+	 	transition: transform .5s ease-out;
 	 	text-align:center;
 
 	 	&--is-visible {

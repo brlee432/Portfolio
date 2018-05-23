@@ -2,8 +2,8 @@ import $ from 'jquery';
 
 import MobileMenu from './modules/MobileMenu';
 import TimeSince from './modules/TimeSince';
-import FlexInfo from './modules/FlexInfo';
+import RevealOnScroll from './modules/RevealOnScroll';
 
 var mobileMenu = new MobileMenu();
 var timeSince = new TimeSince();
-var flexInfo = new FlexInfo();
+new RevealOnScroll($(".flex__item"), "55%");

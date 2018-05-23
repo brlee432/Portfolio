@@ -1032,14 +1032,17 @@ canvas {
 	 	-ms-flex-pack: distribute;
 	 	    justify-content: space-around;
  	}
+.flex__container a {
+ 		text-decoration: none;
+ 	}
 .flex__item {
  		padding:5px;
  		margin-top:20px;
  		height:200px;
  		width:275px;
  		background-color:#000000;
- 		-webkit-box-shadow: 0px 0px 15px #50ff33;
- 		        box-shadow: 0px 0px 15px #50ff33;
+ 		-webkit-box-shadow: 0px 0px 14px #50ff33;
+ 		        box-shadow: 0px 0px 14px #50ff33;
  		
  		text-align:center;
  		color:white;
@@ -1048,8 +1051,9 @@ canvas {
  			line-height:9rem;
  			-webkit-transform: scale(1);
  			        transform: scale(1);
- 			-webkit-transition: all .3s ease-out;
- 			transition: all .3s ease-out;	
+ 			color:#50ff33;
+ 			-webkit-transition: all .5s ease-out;
+ 			transition: all .5s ease-out;	
  		}
 .flex__item--title-with-content {
  			line-height: 1rem;
@@ -1062,8 +1066,10 @@ canvas {
 	 	-webkit-transform:scale(.3);
 	 	        transform:scale(.3);
 	 	position: relative;
-	 	-webkit-transition: all .3s ease-out;
-	 	transition: all .3s ease-out;
+	 	-webkit-transition: -webkit-transform .5s ease-out;
+	 	transition: -webkit-transform .5s ease-out;
+	 	transition: transform .5s ease-out;
+	 	transition: transform .5s ease-out, -webkit-transform .5s ease-out;
 	 	text-align:center;
 
 	 }
