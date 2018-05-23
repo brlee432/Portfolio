@@ -1,0 +1,16 @@
+.icons {
+
+	&__container {
+		margin:1.8rem 0;
+		padding:0;
+		display:flex;
+		flex-flow: row nowrap;
+		
+		justify-content: center;
+
+	}
+
+	&__item {
+		margin: 10px !important;
+	}
+}

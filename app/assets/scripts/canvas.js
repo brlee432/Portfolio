@@ -24,7 +24,7 @@ function zenCanvas() {
 		var logoDimensions = { x: 450, y: 700};
 	} else if (width >=350 && width < 450) {
 		image.src = 'assets/images/logo--particles-smaller.png';
-		var logoDimensions = { x: 290, y: 600};
+		var logoDimensions = { x: 270, y: 570};
 	} else if (width < 350) {
 		image.src = 'assets/images/logo--particles-smaller.png';
 		var logoDimensions = { x: 290, y: 560};

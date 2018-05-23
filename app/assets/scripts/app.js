@@ -6,4 +6,4 @@ import RevealOnScroll from './modules/RevealOnScroll';
 
 var mobileMenu = new MobileMenu();
 var timeSince = new TimeSince();
-new RevealOnScroll($(".flex__item"), "55%");
+new RevealOnScroll($(".flex__item"), "60%");

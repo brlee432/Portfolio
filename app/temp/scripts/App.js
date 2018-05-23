@@ -10461,7 +10461,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mobileMenu = new _MobileMenu2.default();
 var timeSince = new _TimeSince2.default();
-new _RevealOnScroll2.default((0, _jquery2.default)(".flex__item"), "55%");
+new _RevealOnScroll2.default((0, _jquery2.default)(".flex__item"), "60%");
 
 /***/ }),
 /* 2 */
@@ -10657,26 +10657,6 @@ var RevealOnScroll = function () {
 }();
 
 exports.default = RevealOnScroll;
-
-/*class FlexInfo {
-	constructor() {
-		this.flexItem = $(".flex__item");
-		this.flexTitle = $(".flex__item--title");
-		this.flexContent = $(".flex__item-content");
-		this.events();
-	}
-
-	events() {
-		this.flexItem.hover(this.showInfo.bind(this));
-	}
-
-	showInfo() {
-		this.flexContent.toggleClass("flex__item-content--is-visible");
-		this.flexTitle.toggleClass("flex__item--title-with-content");
-	}
-}
-
-export default FlexInfo;*/
 
 /***/ }),
 /* 5 */
