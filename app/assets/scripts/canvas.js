@@ -40,11 +40,19 @@ function zenCanvas() {
 		y: center.y - logoDimensions.y/2
 	};
 
-	var mouse = {
-		radius: Math.pow(100, 2),
-		x: 0,
-		y: 0
-	};
+	if (width >= 530) {
+		var mouse = {
+			radius: Math.pow(100, 2),
+			x: 0,
+			y: 0
+		};
+	} else {
+		var mouse = {
+			radius: Math.pow(30, 2),
+			x: 0,
+			y: 0
+		};
+	}
 
 	var particleArr = [];
 	var particleAttributes = {
@@ -144,7 +152,6 @@ function zenCanvas() {
 	}, false);
 	 
 	document.body.addEventListener("touchend", function(event) {
-	    event.preventDefault();
 	    mouse.x = 0;
 	    mouse.y = 0;
 	}, false);
