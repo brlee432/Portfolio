@@ -54,6 +54,7 @@ function zenCanvas() {
 		};
 	}
 
+
 	var particleArr = [];
 	var particleAttributes = {
 		friction: 0.95,
@@ -76,8 +77,8 @@ function zenCanvas() {
 	};
 	 
 	Particle.prototype.update = function() {
-	    this.rx = mouse.x - this.x;
-	    this.ry = mouse.y - this.y;
+	    this.rx = mouse.x - (this.x-17); //added integers to this and next line account for style induced coordinate distortion
+	    this.ry = mouse.y - (this.y+140);
 	    this.distance = this.rx * this.rx + this.ry * this.ry;
 	    this.force = -mouse.radius / this.distance;
 	    if(this.distance < mouse.radius) {
@@ -149,6 +150,9 @@ function zenCanvas() {
 	    event.preventDefault();
 	    mouse.x = event.targetTouches[0].clientX;
 	    mouse.y = event.targetTouches[0].clientY;
+
+	    console.log("X = " + mouse.x);
+	    console.log("Y = " + mouse.y);
 	}, false);
 	 
 	document.body.addEventListener("touchend", function(event) {

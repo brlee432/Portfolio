@@ -20,7 +20,6 @@ class RevealOnScroll {
 				},
 				offset: that.offsetPercentage
 			});
-			console.log(that.offsetPercentage)
 		});
 	}
 }

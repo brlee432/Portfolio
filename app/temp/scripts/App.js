@@ -10648,7 +10648,6 @@ var RevealOnScroll = function () {
 					},
 					offset: that.offsetPercentage
 				});
-				console.log(that.offsetPercentage);
 			});
 		}
 	}]);
