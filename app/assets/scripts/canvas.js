@@ -77,15 +77,9 @@ function zenCanvas() {
 	};
 	 
 	Particle.prototype.update = function() {
-		if (width >= 530) {
-			this.rx = mouse.x - (this.x-17); //added integers to this and next line account for style induced coordinate distortion
-	    	this.ry = mouse.y - (this.y+140);
-		} else {
-			this.rx = mouse.x - this.x; //added integers to this and next line account for style induced coordinate distortion
-	    	this.ry = mouse.y - this.y;
-		}
-	   
-	    this.distance = this.rx * this.rx + this.ry * this.ry;
+		this.rx = mouse.x - (this.x-17); //added integers to this and next line account for style induced coordinate distortion
+	    this.ry = mouse.y - (this.y+140);
+		this.distance = this.rx * this.rx + this.ry * this.ry;
 	    this.force = -mouse.radius / this.distance;
 	    if(this.distance < mouse.radius) {
 	         this.angle = Math.atan2(this.ry, this.rx);
