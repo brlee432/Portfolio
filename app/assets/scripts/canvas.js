@@ -11,22 +11,22 @@ function zenCanvas() {
 	var height = canvasInteractive.height = canvasReference.height = window.innerHeight;
 
 	if (width >= 800) {
-		image.src = 'assets/images/logo--particles-large.png';
+		image.src = 'app/assets/images/logo--particles-large.png';
 		var logoDimensions = { x: 865, y: 920 };
 	} else if (width >= 600 && width < 800) {
-		image.src = 'assets/images/logo--particles-medium.png';
+		image.src = 'app/assets/images/logo--particles-medium.png';
 		var logoDimensions = { x: 585, y: 815};
 	} else if (width >= 530 && width < 600) {
-		image.src = 'assets/images/logo--particles-med-small.png';
+		image.src = 'app/assets/images/logo--particles-med-small.png';
 		var logoDimensions = { x: 540, y: 740};
 	} else if (width >= 450 && width < 530) {
-		image.src = 'assets/images/logo--particles-small.png';
+		image.src = 'app/assets/images/logo--particles-small.png';
 		var logoDimensions = { x: 450, y: 700};
 	} else if (width >=350 && width < 450) {
-		image.src = 'assets/images/logo--particles-smaller.png';
+		image.src = 'app/assets/images/logo--particles-smaller.png';
 		var logoDimensions = { x: 270, y: 570};
 	} else if (width < 350) {
-		image.src = 'assets/images/logo--particles-smaller.png';
+		image.src = 'app/assets/images/logo--particles-smaller.png';
 		var logoDimensions = { x: 290, y: 560};
 	}
 
