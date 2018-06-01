@@ -7,12 +7,12 @@ gulp.task('watch', function () {
 	browserSync.init({
 		notify: false,
 		server: {
-			baseDir: "app"
+			proxy: "https://localhost/Portfolio"
 		},
 		browser:'firefox'
 	});
 
-	watch('index.html', function () {
+	watch('/home/brandon/Dev/Portfolio/index.html', function () {
 		browserSync.reload();
 	});
 
