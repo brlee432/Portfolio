@@ -12,7 +12,7 @@ gulp.task('watch', function () {
 		browser:'firefox'
 	});
 
-	watch('./app/index.html', function () {
+	watch('index.html', function () {
 		browserSync.reload();
 	});
 
